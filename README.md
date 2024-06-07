@@ -3,6 +3,17 @@
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
 
 ## Development
+Install dependencies
+
+```shellscript
+npm run install
+```
+
+Visit ZeroDev and copy over env variables
+
+```shellscript
+cp .env.example .env
+```
 
 Run the Vite dev server:
 
