@@ -4,26 +4,36 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "postinstall": "patch-package",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
+  "overrides": {
+    "@zerodev/waas": {
+      "viem": "^2.13.7"
+    }
+  },
   "dependencies": {
-    "@mantine/core": "^7.10.1",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@remix-run/serve": "^2.9.2",
-    "@zerodev/ecdsa-validator": "5.2.3",
-    "@zerodev/passkey-validator": "5.2.8",
-    "@zerodev/permissions": "5.2.5",
-    "@zerodev/sdk": "5.2.5",
-    "@zerodev/session-key": "5.2.2",
+    "@zerodev/ecdsa-validator": "^5.2.3",
+    "@zerodev/passkey-validator": "^5.2.8",
+    "@zerodev/permissions": "^5.2.5",
+    "@zerodev/sdk": "^5.2.5",
+    "@zerodev/session-key": "^5.2.2",
+    "@zerodev/waas": "^0.2.2",
+    "@zerodev/weighted-validator": "^5.2.0-alpha-0",
     "isbot": "^4.1.0",
+    "patch-package": "^8.0.0",
+    "permissionless": "^0.1.30",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "viem": "2.x",
+    "viem": "^2.9.17",
     "vite-plugin-node-polyfills": "^0.22.0"
   },
   "devDependencies": {
